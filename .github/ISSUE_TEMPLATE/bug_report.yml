@@ -1,0 +1,85 @@
+name: 🐛 Bug report
+description: Something in this repository's documentation or examples is wrong, unclear, or does not work.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting this.
+
+        > ### ⚠️ Do not include sensitive data
+        >
+        > This issue will be **public and permanent**. Before you type anything:
+        >
+        > - **No candidate or customer data** — no names, email addresses, resumes, interview content, or scores tied to a real person.
+        > - **No credentials** — no OAuth tokens, API keys, session cookies, or passwords, including inside screenshots, logs, and HAR files.
+        > - **Check your screenshots** for anything in the browser chrome, sidebar, or notifications.
+        >
+        > Replace real values with `candidate@example.com`, `<REDACTED>`, and the like.
+        >
+        > **Found a security vulnerability?** Do not file it here — see [SECURITY.md](https://github.com/interviewflowai/interviewflowai-mcp/blob/main/SECURITY.md).
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What went wrong, and what did you expect instead?
+      placeholder: I followed the Claude Code setup steps in the README, and...
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: What you did, in order.
+      placeholder: |
+        1. Ran `claude mcp add --transport http interviewflowai https://api.interviewflowai.com/mcp`
+        2. Ran `/mcp` and signed in
+        3. Asked "Show me the candidates who completed the interview."
+    validations:
+      required: true
+  - type: dropdown
+    id: client
+    attributes:
+      label: MCP client
+      description: Which assistant were you using?
+      options:
+        - Claude Code
+        - Claude Desktop
+        - ChatGPT
+        - Codex CLI
+        - Codex IDE extension or desktop app
+        - Other MCP-compatible client
+        - Not applicable — this is a documentation issue
+    validations:
+      required: true
+  - type: input
+    id: client-version
+    attributes:
+      label: Client version
+      description: If you know it. For Claude Code, `claude --version`.
+  - type: dropdown
+    id: role
+    attributes:
+      label: Your role in the InterviewFlowAI workspace
+      description: Some capabilities are Owner-only, which is a common source of unexpected behavior.
+      options:
+        - Owner
+        - Viewer
+        - Not sure
+        - Not applicable
+  - type: textarea
+    id: errors
+    attributes:
+      label: Error messages or logs
+      description: Paste any error output. **Redact tokens and candidate data first.**
+      render: text
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmation
+      options:
+        - label: I have removed all candidate data, customer data, personal data, and credentials from this report.
+          required: true
+        - label: This is not a security vulnerability. (Security issues go through [SECURITY.md](https://github.com/interviewflowai/interviewflowai-mcp/blob/main/SECURITY.md).)
+          required: true

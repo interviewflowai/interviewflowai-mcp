@@ -1,0 +1,52 @@
+name: 💡 Feature or MCP capability request
+description: Suggest a new MCP capability, a documentation improvement, or a prompt and workflow example.
+title: "[Request]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the suggestion — requests grounded in a real recruiting task are the most useful kind.
+
+        > ### ⚠️ Do not include sensitive data
+        >
+        > This issue will be **public and permanent**. Describe your use case in general terms and leave out candidate data, customer data, personal data, and credentials — screenshots included.
+  - type: dropdown
+    id: type
+    attributes:
+      label: What kind of request is this?
+      options:
+        - A new MCP capability (something the server cannot currently do)
+        - A documentation improvement
+        - A new prompt or workflow example
+        - Support for another MCP client
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: Describe the recruiting task, not the implementation. What are you trying to accomplish, and what stops you today?
+      placeholder: When a role closes, I want to... but currently I have to...
+    validations:
+      required: true
+  - type: textarea
+    id: prompt
+    attributes:
+      label: What would you want to type?
+      description: If you could ask your assistant for this in plain language, what would the prompt be?
+      placeholder: "Show me every candidate who..."
+      render: text
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: How do you handle it now?
+      description: Your current workaround, if you have one. This helps us understand how much the gap costs you.
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmation
+      options:
+        - label: I have not included any candidate data, customer data, personal data, or credentials in this request.
+          required: true

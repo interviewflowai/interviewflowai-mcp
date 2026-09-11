@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📚 InterviewFlowAI MCP documentation
+    url: https://docs.interviewflowai.com/platform/mcp
+    about: Setup steps, supported capabilities, and the authoritative permissions reference.
+  - name: 💬 Product support and account help
+    url: https://interviewflowai.com/contact
+    about: Questions about your workspace, billing, or your InterviewFlowAI account. Not for security reports.
+  - name: 🔒 Report a security vulnerability
+    url: https://github.com/interviewflowai/interviewflowai-mcp/security/advisories/new
+    about: Report privately. Never open a public issue for a security problem.

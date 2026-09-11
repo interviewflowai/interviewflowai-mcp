@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.interviewflowai/interviewflowai-mcp",
+  "title": "InterviewFlowAI",
+  "description": "Query InterviewFlowAI candidate and interview data from MCP-compatible AI assistants.",
+  "version": "1.0.0",
+  "websiteUrl": "https://interviewflowai.com/features/mcp",
+  "repository": {
+    "url": "https://github.com/interviewflowai/interviewflowai-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.interviewflowai.com/mcp"
+    }
+  ]
+}
