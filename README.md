@@ -3,14 +3,16 @@
 Connect InterviewFlowAI to Claude, ChatGPT, Codex, and other MCP-compatible AI assistants. Ask about your candidates and interviews in plain language, and perform supported recruiting actions without leaving your AI workflow.
 
 ```text
-"Show me the candidates who completed the interview."
+"Who are my top candidates for the Senior PM role, and where did each of them shine?"
 
-"Show me the top 10 candidates by interview score."
+"Compare our top two finalists on communication and problem-solving,
+ and draft a summary for the hiring manager."
 
-"Show me candidates with an interview score of 70 or above."
+"Show me everyone who completed the interview this week,
+ grouped into strong, maybe, and no."
 ```
 
-Ask a question like that in Claude or Codex, and the answer comes back from your own InterviewFlowAI workspace — not from a spreadsheet you pasted in ten minutes ago.
+Ask a question like that in Claude or Codex, and the answer comes back from your own InterviewFlowAI workspace — not from a spreadsheet you pasted in ten minutes ago. The assistant finds the candidates, reads the interviews behind them, and answers the question you actually had.
 
 > **InterviewFlowAI MCP is a hosted remote MCP server.** You do not need to run anything locally, install a package, or manage a server. You connect your AI assistant to `https://api.interviewflowai.com/mcp` and sign in with your InterviewFlowAI account.
 
@@ -72,17 +74,22 @@ Show me candidates with an interview score of 70 or above.
 
 ### Going further
 
-Those three are deliberately simple. In practice you can ask for the retrieval and the thinking together, and this is where a connected assistant starts to save you real time:
+Those three are deliberately simple — they are the fastest way to confirm the connection works. Once it does, you can ask for the retrieval and the thinking in one question:
 
 ```text
-Who are my top candidates for the Senior PM role, and where did each of them shine?
+Of the candidates who scored above 70, which three would you look at first,
+and what would you want to probe in a live call?
 ```
 
 ```text
-Compare our top two finalists on communication and problem-solving, and draft a quick summary for the hiring manager.
+This candidate scored lower than the others but I liked them on the call.
+What does the interview actually show, and where does the score come from?
 ```
 
-The assistant finds the candidates, reads the interviews behind them, and answers the question you actually had — rather than handing you a list to go read yourself.
+```text
+Across the candidates for this role, what are the most common weak spots?
+Is that the candidates, or is it how the interview is asking the question?
+```
 
 A larger, categorized set lives in **[examples/recruiting-prompts.md](examples/recruiting-prompts.md)**, and end-to-end recruiting workflows in **[examples/workflows.md](examples/workflows.md)**.
 
