@@ -7,7 +7,8 @@
   "websiteUrl": "https://interviewflowai.com/features/mcp",
   "repository": {
     "url": "https://github.com/interviewflowai/interviewflowai-mcp",
-    "source": "github"
+    "source": "github",
+    "id": "1365568547"
   },
   "remotes": [
     {
