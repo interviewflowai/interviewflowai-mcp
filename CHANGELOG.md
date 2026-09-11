@@ -14,6 +14,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - README covering capabilities, the hosted MCP endpoint, how it works, authentication, and the permissions model.
 - Setup instructions for Claude Code, Claude Desktop, Codex CLI, Codex IDE and desktop, ChatGPT, and other MCP-compatible clients.
 - Recruiting prompt library in `examples/recruiting-prompts.md`, organized by task.
+- Multi-step prompt examples that combine retrieval, comparison, and drafting in a single question.
 - End-to-end recruiting workflows in `examples/workflows.md`.
 - MCP Registry metadata in `server.json`, declaring the hosted server as a Streamable HTTP remote.
 - Security policy in `SECURITY.md`.

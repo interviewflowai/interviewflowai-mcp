@@ -6,7 +6,7 @@ Every prompt here maps to a documented InterviewFlowAI MCP capability. Prompts m
 
 Write prompts in your own words. These are starting points, not commands with a fixed syntax; the assistant interprets intent, so "who finished their interview?" works as well as the phrasing below.
 
-> New to this? Start with [Candidate discovery](#candidate-discovery) and [Interview completion](#interview-completion). They are read-only, they answer immediately, and they tell you straight away whether the connection is working.
+> New to this? Start with [Candidate discovery](#candidate-discovery) and [Interview completion](#interview-completion). They are read-only, they answer immediately, and they tell you straight away whether the connection is working. Once that works, [Multi-step questions](#multi-step-questions) is where this gets genuinely useful.
 
 ---
 
@@ -113,6 +113,50 @@ What are the main strengths and gaps in this candidate's interview?
 ```text
 What follow-up questions should I ask this candidate in a live call?
 ```
+
+---
+
+## Multi-step questions
+
+The prompts above do one thing each. In practice you can ask for the retrieval and the thinking in a single breath, and this is where a connected assistant earns its place — it pulls the candidates, reads the interviews behind them, and answers the actual question you had.
+
+```text
+Who are my top candidates for the Senior PM role, and where did each of them shine?
+```
+
+```text
+Compare our top two finalists on communication and problem-solving, and draft a quick summary for the hiring manager.
+```
+
+```text
+Of the candidates who scored above 70, which three would you look at first, and what would you want to probe in a live call?
+```
+
+```text
+Take everyone who completed the interview this week, group them into strong / maybe / no, and tell me what put each person in their group.
+```
+
+```text
+Across the candidates for this role, what are the most common weak spots? Is that the candidates, or is it how the interview is asking the question?
+```
+
+```text
+Summarize the top 5 candidates for the hiring manager — two sentences each, and lead with what makes each one different from the others.
+```
+
+```text
+This candidate scored lower than the others but I liked them on the call. What does the interview actually show, and where does the score come from?
+```
+
+```text
+Shortlist the candidates worth a hiring manager screen, then draft the handoff note — show me the note before saving anything.
+```
+
+**Two things to keep in mind with prompts like these.**
+
+Drafting is not writing. When an assistant drafts a summary or a handoff note, that text lives in your chat — nothing reaches InterviewFlowAI until you explicitly ask it to save a note, and that step needs Owner access. Ask for the draft first, read it, then decide whether it gets saved.
+
+Judgment is still yours. A prompt phrased as "which three would you look at first" gets you an opinion assembled from interview data, which is a genuinely useful starting point and not a decision. Read the interviews behind any answer that will change what happens to a candidate.
 
 ---
 

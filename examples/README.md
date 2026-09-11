@@ -4,7 +4,7 @@ Copy-and-paste material for using InterviewFlowAI with your AI assistant.
 
 | File | What's in it |
 |---|---|
-| **[recruiting-prompts.md](recruiting-prompts.md)** | A categorized prompt library: candidate discovery, interview completion, scoring, review, summaries, AI Interviewers, operations, and notes. |
+| **[recruiting-prompts.md](recruiting-prompts.md)** | A categorized prompt library: candidate discovery, interview completion, scoring, review, summaries, multi-step questions, AI Interviewers, operations, and notes. |
 | **[workflows.md](workflows.md)** | Seven end-to-end recruiting workflows, each with a goal, a prompt, what MCP does, and the human review step. |
 
 ## How to use these

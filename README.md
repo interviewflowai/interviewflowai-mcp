@@ -70,6 +70,20 @@ Show me the top 10 candidates by interview score.
 Show me candidates with an interview score of 70 or above.
 ```
 
+### Going further
+
+Those three are deliberately simple. In practice you can ask for the retrieval and the thinking together, and this is where a connected assistant starts to save you real time:
+
+```text
+Who are my top candidates for the Senior PM role, and where did each of them shine?
+```
+
+```text
+Compare our top two finalists on communication and problem-solving, and draft a quick summary for the hiring manager.
+```
+
+The assistant finds the candidates, reads the interviews behind them, and answers the question you actually had — rather than handing you a list to go read yourself.
+
 A larger, categorized set lives in **[examples/recruiting-prompts.md](examples/recruiting-prompts.md)**, and end-to-end recruiting workflows in **[examples/workflows.md](examples/workflows.md)**.
 
 ---
