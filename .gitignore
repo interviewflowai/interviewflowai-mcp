@@ -4,3 +4,8 @@ Thumbs.db
 .idea/
 .vscode/
 node_modules/
+
+# Registry publishing key material - must never be committed
+*.pem
+key.pem
+mcp-registry-auth
