@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Multi-step prompt examples that combine retrieval, comparison, and drafting in a single question.
 - End-to-end recruiting workflows in `examples/workflows.md`.
 - MCP Registry metadata in `server.json`, declaring the hosted server as a Streamable HTTP remote.
+- Published to the official MCP Registry as `com.interviewflowai/mcp` version 1.0.0, under the domain-verified `com.interviewflowai` namespace.
 - Security policy in `SECURITY.md`.
 - MIT license covering this repository's documentation and examples.
 - Asset requirements in `assets/README.md` for the demo recordings referenced by the README.

@@ -17,6 +17,7 @@ Ask a question like that in Claude or Codex, and the answer comes back from your
 > **InterviewFlowAI MCP is a hosted remote MCP server.** You do not need to run anything locally, install a package, or manage a server. You connect your AI assistant to `https://api.interviewflowai.com/mcp` and sign in with your InterviewFlowAI account.
 
 - **MCP endpoint** — `https://api.interviewflowai.com/mcp`
+- **Registry name** — `com.interviewflowai/mcp`
 - **Documentation** — https://docs.interviewflowai.com/platform/mcp
 - **Product page** — https://interviewflowai.com/features/mcp
 
@@ -138,6 +139,33 @@ https://api.interviewflowai.com/mcp
 | Hosting | Hosted by InterviewFlowAI — no local install |
 
 The server implements standard MCP OAuth discovery, so most clients need nothing beyond the URL: they find the authorization server themselves and walk you through sign-in in your browser.
+
+---
+
+## MCP Registry
+
+InterviewFlowAI MCP is published in the official [Model Context Protocol Registry](https://registry.modelcontextprotocol.io/), the standard index that MCP clients and directories use to discover servers.
+
+```text
+com.interviewflowai/mcp
+```
+
+| | |
+|---|---|
+| Registry name | `com.interviewflowai/mcp` |
+| Version | `1.0.0` |
+| Transport | Streamable HTTP |
+| Remote endpoint | `https://api.interviewflowai.com/mcp` |
+
+The `com.interviewflowai` namespace is domain-verified, so the listing is published by InterviewFlowAI itself rather than by a third party.
+
+You can query the live record directly:
+
+```bash
+curl "https://registry.modelcontextprotocol.io/v0.1/servers?search=com.interviewflowai/mcp"
+```
+
+The manifest published to the registry is [`server.json`](server.json) in this repository. Being listed in the registry does not change how you connect — clients that read the registry can find InterviewFlowAI automatically, and everything in [Connect InterviewFlowAI to your AI assistant](#connect-interviewflowai-to-your-ai-assistant) works exactly the same either way.
 
 ---
 
