@@ -46,11 +46,15 @@ This repository contains documentation, examples, and configuration resources.
 - **Issues in this repository** — incorrect or unsafe setup instructions, documentation that would lead someone to expose a credential, or problems with the files published here. Report them as described above.
 - **Issues in the hosted InterviewFlowAI MCP service or the InterviewFlowAI platform** — report them through the private channels above as well. The service implementation is not published in this repository, but the report reaches the same team.
 
+We especially want to hear about any way to reach another company's data, to act with more access than your role allows, to make a change without a preview, or to get an assistant to act on instructions planted in candidate data.
+
 ## Good practice for users
 
 - Authenticate through the browser sign-in flow rather than pasting credentials into a client configuration file. AI assistants don't need an API key.
 - Only click **Allow access** on the InterviewFlowAI consent screen if you started the connection from your own assistant.
-- Treat an API key as full Owner access — it can use every write tool, whatever your own role. Keep it out of shared configuration files, and never commit a configuration file containing a token or API key to a repository.
-- Read the preview of every change before you confirm it, especially actions that email candidates or touch many of them.
-- Treat candidate export links as sensitive: they work for anyone who has the link until they expire an hour later.
+- Treat an API key like an Owner's password: it can use every write tool. Keep it out of shared configuration files and AI chats, never commit a configuration file containing a token or API key to a repository, and delete keys you no longer need.
+- Read the preview of every change before you confirm it, especially actions that email candidates or touch many of them. Confirm only changes you asked for.
+- Keep your AI client's approval prompt on for InterviewFlowAI tools that change data or email candidates.
+- Treat candidate content (resumes, interview answers, notes) as untrusted: it can contain instructions written for an AI assistant. Be careful combining InterviewFlowAI with tools that can send data outside your company in the same conversation.
+- Treat candidate export links as sensitive: for 15 minutes, they work for anyone who has the link.
 - Review **Settings → Connected apps** from time to time, and disconnect any assistant or device you no longer use or control.

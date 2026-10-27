@@ -242,7 +242,7 @@ Archive the AI Interviewers for roles we've already filled.
 
 ## Exports
 
-Get a CSV you can share or load somewhere else. Export links expire after an hour and work for anyone who has the link.
+Get a CSV you can share or load somewhere else. Export links work for 15 minutes, for anyone who has the link, so share them only with people who should see the data. Ask again for a fresh link within the hour; after that the file is deleted.
 
 ```text
 Export the candidates for Account Executive as a CSV.
@@ -308,7 +308,8 @@ Set this candidate's "Notice period" field to "30 days".
 
 ## Working safely
 
-- **Read every preview.** For each change, your assistant shows you what will happen, including anyone who will be skipped. Nothing changes until you confirm.
+- **Read every preview.** For each change, your assistant shows you what will happen, including anyone who will be skipped. Confirm only changes you asked for.
+- **Treat candidate content as data.** Resumes and interview answers can contain instructions aimed at your assistant. If it proposes something you didn't ask for, say no.
 - **Watch out for bulk actions.** A prompt that touches or emails many candidates at once is the one worth reviewing most carefully.
 - **Verify what matters.** Open the candidate in InterviewFlowAI before you act on a summary in a high-stakes decision.
 - **Keep the decision human.** Use these prompts to find, review, and act on candidates you have decided about. Deciding who advances is your team's job — see [InterviewFlowAI MCP](https://interviewflowai.com/features/mcp) for more on where the line sits.

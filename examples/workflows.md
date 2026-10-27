@@ -83,7 +83,7 @@ Then star the ones I pick and export the starred candidates as a CSV.
 Retrieves the ranked candidates and their interviews so the summaries come from the real interview rather than the score alone. After you pick, it previews the star ratings, applies them once you confirm, and exports the starred candidates to a CSV with a download link.
 
 **Human review / next step**
-Read each summary against the interview before it goes out, and add your own read on fit. The export link expires after an hour and works for anyone who has it, so send the file itself, not the link, to the hiring manager.
+Read each summary against the interview before it goes out, and add your own read on fit. The export link works for 15 minutes for anyone who has it, so download the file and send that, not the link, to the hiring manager.
 
 ---
 
@@ -204,7 +204,7 @@ Later: show me their role play results, best first, with strengths and red flags
 ```
 
 **What InterviewFlowAI MCP does**
-Checks the role play is published, previews the invitations, and emails each candidate the link once you confirm. When candidates finish, it reads each graded session: overall score, per-criterion reasoning and evidence, strengths, gaps, and red flags.
+Previews the invitations, including whether the role play is published, and emails each candidate the link once you confirm. An unpublished role play can't be sent. When candidates finish, it reads each graded session: overall score, per-criterion reasoning and evidence, strengths, gaps, and red flags.
 
 **Human review / next step**
 Read the evidence behind any red flag before acting on it. Each candidate gets one attempt per role play.
@@ -261,7 +261,7 @@ These workflows are built on a deliberate split:
 - **The assistant does the retrieval, the first pass, and the legwork** — finding, filtering, ranking, summarizing, comparing, and carrying out the actions you approve.
 - **You do the judgment** — who is worth your time, who moves forward, and what a score actually means for this role.
 
-InterviewFlowAI MCP is built to support that split. Every change and every email to a candidate is previewed and needs your confirmation, enforced by the server, and nothing about a candidate is decided automatically.
+InterviewFlowAI MCP is built to support that split. Every change and every email to a candidate starts as a preview for you to confirm, and nothing about a candidate is decided automatically.
 
 ---
 

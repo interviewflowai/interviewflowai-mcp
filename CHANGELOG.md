@@ -16,9 +16,10 @@ Brings this repository in line with version 1.1.0 of the hosted server.
 - The agent setup prompt from **Settings → MCP and AI**, which a coding agent can follow to add the server and start sign-in.
 - A tool reference in the README: 12 read tools for every signed-in user, and 12 Owner tools.
 - Documentation of the new capabilities: resume feedback, candidate timelines, hiring stages, CSV exports, role plays and their graded results, starring candidates, moving them between stages, reminders, invitations, link extensions, role play invitations, and drafting, creating, and cloning AI Interviewers.
-- How changes are confirmed: every change and every email to a candidate returns a preview and a one-time confirmation code first, enforced by the server.
+- How changes are confirmed: every change and every email to a candidate returns a preview and a one-time confirmation code first, and why your AI client's approval prompt should stay on as a second check.
+- Guidance on untrusted candidate content and prompt injection, a note for AI agents that read this repository, and what to report under `SECURITY.md`.
 - Limits and rules for each action, a troubleshooting table, and how to disconnect an assistant from **Settings → Connected apps**.
-- How to connect a script with an API key, and that an API key has full Owner access.
+- How to connect a script with an API key, and that an API key acts as the Owner who created it.
 - Prompt library sections for role plays, AI Interviewers, exports, and pipeline actions, and five new workflows.
 - More MCP clients in the bug report template.
 
@@ -28,6 +29,7 @@ Brings this repository in line with version 1.1.0 of the hosted server.
 - Visibility and archived status now apply to AI Interviewers, not candidates.
 - `server.json` is version 1.1.0, with a description that covers the new actions.
 - Security guidance covers connected apps, API keys, and export links.
+- Export links are documented as working for 15 minutes, with the file deleted after an hour.
 
 ### Removed
 
