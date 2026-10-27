@@ -35,7 +35,7 @@ Security reports should demonstrate a problem, not carry a copy of the data at r
 Treat any credential that has appeared somewhere public as compromised, even briefly, even in a deleted comment.
 
 1. **Revoke it immediately.** Deleting the message is not enough — content is cached, indexed, and mirrored within seconds.
-2. **Disconnect the affected MCP connection** in your AI client and re-authenticate to obtain a fresh session.
+2. **Disconnect the affected MCP connection.** In InterviewFlowAI, open **Settings → Connected apps** and click **Disconnect** next to the assistant; it loses access immediately. For an exposed API key, delete the key under **Settings → API Keys**. Then reconnect to obtain a fresh session.
 3. **Tell us**, through the private channels above, so we can help check for misuse.
 4. **Rotate anything related.** If one credential was exposed through a given path, assume others on the same path were too.
 
@@ -48,8 +48,9 @@ This repository contains documentation, examples, and configuration resources.
 
 ## Good practice for users
 
-- Connect with read-only access (`mcp:read`) unless you need to write.
-- Authenticate through the browser sign-in flow rather than pasting credentials into a client configuration file.
-- Never commit a client configuration file containing tokens to a repository.
-- Review every write action before approving it.
-- Remove the connection from any device you no longer control.
+- Authenticate through the browser sign-in flow rather than pasting credentials into a client configuration file. AI assistants don't need an API key.
+- Only click **Allow access** on the InterviewFlowAI consent screen if you started the connection from your own assistant.
+- Treat an API key as full Owner access — it can use every write tool, whatever your own role. Keep it out of shared configuration files, and never commit a configuration file containing a token or API key to a repository.
+- Read the preview of every change before you confirm it, especially actions that email candidates or touch many of them.
+- Treat candidate export links as sensitive: they work for anyone who has the link until they expire an hour later.
+- Review **Settings → Connected apps** from time to time, and disconnect any assistant or device you no longer use or control.

@@ -1,10 +1,10 @@
 # Recruiting prompt library
 
-Prompts you can copy into Claude, ChatGPT, Codex, or any other MCP-compatible assistant once InterviewFlowAI MCP is connected.
+Prompts you can copy into Claude, ChatGPT, Codex, Cursor, VS Code, OpenCode, or any other MCP-compatible assistant once InterviewFlowAI MCP is connected.
 
-Every prompt here maps to a documented InterviewFlowAI MCP capability. Prompts marked **Owner only** need the `mcp:write` scope and a workspace Owner role — see [Permissions](../README.md#permissions).
+Every prompt here maps to a documented InterviewFlowAI MCP capability. Prompts marked **Owner only** change data or email candidates, so they need a workspace Owner role — see [Permissions](../README.md#permissions). For each one, your assistant shows you a preview and waits for you to confirm before anything happens.
 
-Write prompts in your own words. These are starting points, not commands with a fixed syntax; the assistant interprets intent, so "who finished their interview?" works as well as the phrasing below.
+Write prompts in your own words. These are starting points, not commands with a fixed syntax; the assistant interprets intent, so "who finished their interview?" works as well as the phrasing below. Swap in your own AI Interviewer names, stages, scores, and thresholds.
 
 > New to this? Start with [Candidate discovery](#candidate-discovery) and [Interview completion](#interview-completion). They are read-only, they answer immediately, and they tell you straight away whether the connection is working. Once that works, [Multi-step questions](#multi-step-questions) is where this gets genuinely useful.
 
@@ -15,7 +15,7 @@ Write prompts in your own words. These are starting points, not commands with a 
 Find the people in your pipeline without filtering a dashboard first.
 
 ```text
-Show me the candidates in my workspace.
+List my AI Interviewers and how many candidates each one has.
 ```
 
 ```text
@@ -23,11 +23,15 @@ Which candidates have applied for the Customer Support Lead role?
 ```
 
 ```text
-Show me the candidates who have not completed their interview yet.
+Show me the candidates for Sales Associate who have not completed their interview yet.
 ```
 
 ```text
-How many candidates do we have in total right now?
+How many candidates are shortlisted, completed, and starred for the Data Analyst role?
+```
+
+```text
+Find the candidate named Priya in the Product Designer pipeline.
 ```
 
 ---
@@ -37,11 +41,11 @@ How many candidates do we have in total right now?
 Separate the pipeline into "ready to review" and "still waiting."
 
 ```text
-Show me the candidates who completed the interview.
+Show me the candidates who completed the interview for Senior Engineer.
 ```
 
 ```text
-Which candidates completed an interview this week?
+Who completed their interview most recently for Account Executive?
 ```
 
 ```text
@@ -55,7 +59,7 @@ Show me everyone who started an interview but did not finish it.
 Turn a large pool into a short list worth your attention.
 
 ```text
-Show me the top 10 candidates by interview score.
+Show me the top 10 candidates by interview score for Senior Engineer.
 ```
 
 ```text
@@ -63,11 +67,15 @@ Show me candidates with an interview score of 70 or above.
 ```
 
 ```text
-Rank the candidates who completed the interview by score, highest first.
+Rank the candidates for Product Designer by resume score, highest first.
 ```
 
 ```text
-What is the score distribution across candidates who completed the interview?
+Who has the highest assessment score for the Data Analyst role?
+```
+
+```text
+Show me the candidates who scored between 50 and 70 — the ones on the fence.
 ```
 
 ---
@@ -85,11 +93,15 @@ What was this candidate's interview score, and what drove it?
 ```
 
 ```text
-Compare these two candidates on their interview performance.
+Why did this candidate get a low resume score? What were the gaps against the job's requirements?
 ```
 
 ```text
-Which of the top-scoring candidates should I look at first, and why?
+Show me this candidate's timeline — when were they invited, reminded, and moved between stages?
+```
+
+```text
+Compare these two candidates on their interview performance.
 ```
 
 ---
@@ -141,71 +153,147 @@ Across the candidates for this role, what are the most common weak spots? Is tha
 ```
 
 ```text
-Summarize the top 5 candidates for the hiring manager — two sentences each, and lead with what makes each one different from the others.
-```
-
-```text
 This candidate scored lower than the others but I liked them on the call. What does the interview actually show, and where does the score come from?
 ```
 
 ```text
-Shortlist the candidates worth a hiring manager screen, then draft the handoff note — show me the note before saving anything.
+For the top 5 by interview score, how do their resume scores and role play results compare? Does anyone look stronger on one than the other?
+```
+
+```text
+Shortlist the candidates worth a hiring manager screen, star them, and draft the handoff note — show me the note before saving anything.
 ```
 
 **Two things to keep in mind with prompts like these.**
 
-Drafting is not writing. When an assistant drafts a summary or a handoff note, that text lives in your chat — nothing reaches InterviewFlowAI until you explicitly ask it to save a note, and that step needs Owner access. Ask for the draft first, read it, then decide whether it gets saved.
+Drafting is not writing. When an assistant drafts a summary or a handoff note, that text lives in your chat — nothing reaches InterviewFlowAI until you ask it to save a note, and that step needs Owner access and your confirmation. Read the draft first, then decide whether it gets saved.
 
 Judgment is still yours. A prompt phrased as "which three would you look at first" gets you an opinion assembled from interview data, which is a genuinely useful starting point and not a decision. Read the interviews behind any answer that will change what happens to a candidate.
 
 ---
 
+## Role plays
+
+See how candidates did in a role play, criterion by criterion.
+
+```text
+List our role plays and how many candidates completed each one.
+```
+
+```text
+Show me the results for the customer-call role play, highest score first.
+```
+
+```text
+Show me this candidate's role play results — strengths, gaps, and any red flags.
+```
+
+```text
+Why did this candidate score low on objection handling in the role play? Show me the evidence.
+```
+
+**Owner only.**
+
+```text
+Invite the shortlisted candidates for Account Executive to the customer-call role play.
+```
+
+---
+
 ## AI Interviewers
 
-Check what is actually configured in your workspace.
+Check what is configured in your workspace, and set up new ones.
 
 ```text
 List the AI Interviewers in my workspace.
 ```
 
 ```text
-Show me the details of the AI Interviewer used for the Support Lead role.
+Show me the questions and settings of the AI Interviewer for the Support Lead role.
 ```
 
 ```text
-Which AI Interviewer did this candidate go through?
+Which hiring stages do we have?
+```
+
+**Owner only.**
+
+```text
+Draft an AI Interviewer from this job description: …
+```
+
+```text
+Create it, but replace the third question with one about on-call experience.
+```
+
+```text
+Clone the Backend Engineer AI Interviewer.
+```
+
+```text
+Make the Sales Associate AI Interviewer public so candidates can start without waiting for me.
+```
+
+```text
+Archive the AI Interviewers for roles we've already filled.
 ```
 
 ---
 
-## Recruiting operations
+## Exports
 
-**Owner only.** These change candidate records. Ask the assistant to show you the change before it applies it.
+Get a CSV you can share or load somewhere else. Export links expire after an hour and work for anyone who has the link.
 
 ```text
-Add a note to this candidate: strong on stakeholder examples, needs a technical follow-up.
+Export the candidates for Account Executive as a CSV.
 ```
 
 ```text
-Update this candidate's custom field "Stage" to "Hiring manager review".
-```
-
-```text
-Archive the candidates who did not complete their interview — show me the list first.
-```
-
-```text
-Change this candidate's visibility so the hiring manager can see them.
+Export the starred candidates for Senior Engineer with name, email, interview score, and resume score.
 ```
 
 ---
 
-## Candidate notes
+## Pipeline actions
 
-**Owner only.** Notes are the lightest-weight way to keep a record current from inside your assistant.
+**Owner only.** These change candidate records or email candidates. Your assistant shows you a preview — who is affected and who will be skipped — and waits for you to confirm.
 
 ```text
-Add a note to this candidate summarizing what we discussed on today's call.
+Star the top 5 candidates by interview score for Senior Engineer.
+```
+
+```text
+Give this candidate 3 stars.
+```
+
+```text
+Move the starred candidates for Product Designer to the Onsite stage.
+```
+
+```text
+Remind everyone who hasn't finished their interview for Customer Support Lead.
+```
+
+```text
+Give Priya 3 more days to finish her interview.
+```
+
+```text
+Invite these candidates to the Data Analyst interview: Jane Doe jane@example.com, Sam Lee sam@example.com.
+```
+
+```text
+Invite these candidates to apply for Sales Associate, rather than sending the interview link straight away: …
+```
+
+---
+
+## Candidate notes and custom fields
+
+**Owner only.** Notes are the lightest-weight way to keep a record current from inside your assistant. Saving a note replaces the existing notes, so ask the assistant to add to them if you want to keep what is there.
+
+```text
+Add to this candidate's notes: strong on stakeholder examples, needs a technical follow-up.
 ```
 
 ```text
@@ -213,17 +301,17 @@ Based on this candidate's interview summary, draft a note for the hiring manager
 ```
 
 ```text
-Add a note to each of the top 3 candidates saying they have been shortlisted for a hiring manager review. List the changes before making them.
+Set this candidate's "Notice period" field to "30 days".
 ```
 
 ---
 
 ## Working safely
 
-- **Confirm every write.** Add "show me the change first" to any prompt that updates a record.
-- **Watch out for bulk changes.** A prompt that touches many candidates at once is the one worth reviewing most carefully.
+- **Read every preview.** For each change, your assistant shows you what will happen, including anyone who will be skipped. Nothing changes until you confirm.
+- **Watch out for bulk actions.** A prompt that touches or emails many candidates at once is the one worth reviewing most carefully.
 - **Verify what matters.** Open the candidate in InterviewFlowAI before you act on a summary in a high-stakes decision.
-- **Keep the decision human.** Use these prompts to find and review candidates. Deciding who advances is your team's job — see [InterviewFlowAI MCP](https://interviewflowai.com/features/mcp) for more on where the line sits.
+- **Keep the decision human.** Use these prompts to find, review, and act on candidates you have decided about. Deciding who advances is your team's job — see [InterviewFlowAI MCP](https://interviewflowai.com/features/mcp) for more on where the line sits.
 
 ---
 

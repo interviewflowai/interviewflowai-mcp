@@ -35,7 +35,7 @@ body:
       placeholder: |
         1. Ran `claude mcp add --transport http interviewflowai https://api.interviewflowai.com/mcp`
         2. Ran `/mcp` and signed in
-        3. Asked "Show me the candidates who completed the interview."
+        3. Asked "List my AI Interviewers."
     validations:
       required: true
   - type: dropdown
@@ -46,10 +46,15 @@ body:
       options:
         - Claude Code
         - Claude Desktop
+        - Claude (claude.ai)
         - ChatGPT
         - Codex CLI
         - Codex IDE extension or desktop app
+        - Cursor
+        - VS Code
+        - OpenCode
         - Other MCP-compatible client
+        - Script or tool using an API key
         - Not applicable — this is a documentation issue
     validations:
       required: true

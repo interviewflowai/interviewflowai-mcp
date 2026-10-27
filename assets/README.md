@@ -50,6 +50,18 @@ Show a large pool being narrowed by a threshold.
 
 A screenshot of InterviewFlowAI connected in an MCP client — the Claude Desktop connector screen or the Claude Code `/mcp` panel showing InterviewFlowAI as connected. This is the "it actually works" proof that belongs next to the setup instructions.
 
+### Demo 5 — A confirmed action
+
+**Prompt to capture**
+
+```text
+Star the top 5 candidates by interview score and move them to the Onsite stage.
+```
+
+**Filename** — `confirmed-action.gif`
+
+Show the assistant returning the preview — the candidates, the change, and anyone skipped — then the user confirming and the change being applied. This is the clearest proof that nothing changes without the user's say-so.
+
 ## Capture guidelines
 
 **Use real data from a demo workspace, never a customer workspace.** Every candidate name, email address, score, and role visible in a recording is published permanently the moment the repository is public, and a GIF cannot be partially redacted after the fact.
